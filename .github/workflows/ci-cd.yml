@@ -27,7 +27,7 @@ jobs:
 
             - name: Run tests
               run: |
-                python src/tests --maxfail=1 --disable-warnings -q
+                pytest src/tests --maxfail=1 --disable-warnings -q
 
     build-and-push:
         runs-on: ubuntu-latest
