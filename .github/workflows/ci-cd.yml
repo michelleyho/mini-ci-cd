@@ -56,11 +56,6 @@ jobs:
         needs: build-and-push
         if: startsWith(github.ref, 'refs/tags/')
         steps:
-            - name: Manual approval before deploy
-              uses: hmarr/auto-approve-action@v2
-              with:
-                github-token: ${{ secrets.GITHUB_TOKEN }}
-
             - name: Checkout repository
               uses: actions/checkout@v4
 
